@@ -1,22 +1,23 @@
 import React from "react";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
-export const Game = (score, myChoice, setScore) => {
+ const Game = ({myChoice}) => {
+   
   const [computer, setComputer] = useState("");
   const [playerWin, setPlayerwin] = useState("");
 
   const newComputerChoice = () => {
-    const choice = ["rock", "paper", "scissor"];
-    setComputer(choice[Math.floor(Math.random() * 3)]);
+    const choices = ["rock", "paper", "scissor"];
+    setComputer(choices[Math.floor(Math.random() * 3)]);
   };
   useEffect(() => {
     newComputerChoice();
   }, []);
-
-  return
+debugger
+  return(
   <div className="game">
- my choice:{myChoice} <br/>
- Computer Choice:{computer}
-  </div>;
-};
+    Computer Choice:{computer}<br/> my choice :{myChoice}
+
+  </div>
+  )}
 export default Game;

@@ -2,17 +2,13 @@ describe("user can play game", () => {
   beforeEach(() => {
     cy.visit('/')
   });
-
-  it("display a header", () => {
-    cy.get("[data-cy=header]").should("contain");
-  });
-  it ("display buttons for selecting stone", () => {
-    cy.get("[data-cy=stone-bt]").should("contain","stone");
+  it ("for selecting rock", () => {
+    cy.get("[data-cy=rock").should("contain","Rock");
   })
   it ("display buttons for selecting stone", () => {
-    cy.get("[data-cy=paper-bt]").should("contain","stone")
+    cy.get("[data-cy=paper]").should("contain","Paper")
   })
   it ("display buttons for selecting stone", () => {
-    cy.get("[data-cy=scissor-bt").should("contain","scissors");
+    cy.get("[data-cy=scissor").should("contain","Scissor");
   })
 });
