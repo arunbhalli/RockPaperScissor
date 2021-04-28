@@ -51,3 +51,31 @@ describe("User select  Paper ", () => {
 		cy.get('[data-cy="result"]').should("contain", "It is a draw!");
 	});
 });
+
+
+describe("User select  Scissor ", () => {
+	beforeEach(() => {
+		cy.visit("/")
+	});
+  
+	it("Computer  choose Rock and Won ", () => {
+		cy.get('[data-cy="Scissor"]').click();
+		cy.get('[data-cy="my-choice"]').should("contain", "My choice: Scissor");
+		cy.get('[data-cy="computer-selection"]').should("contain","Computer choice: Rock");
+		cy.get('[data-cy="result"]').should("contain", "Computer Won");
+	});
+
+	it("Computer  choose Scissor it is a draw", () => {
+		cy.get('[data-cy="Scissor"]').click();
+		cy.get('[data-cy="my-choice"]').should("contain", "My choice: Scissor");
+		cy.get('[data-cy="computer"]').should("contain","Computer choice: Scissor");
+		cy.get('[data-cy="result"]').should("contain", "It is a draw!!");
+	});
+
+	it("Computer  choose Paper it is a draw", () => {
+		cy.get('[data-cy="Scissor"]').click();
+		cy.get('[data-cy="my-choice"]').should("contain",	"My choice: Scissor");
+		cy.get('[data-cy="computer"]').should("contain","Computer choice: Paper");
+		cy.get('[data-cy="result"]').should("contain", "Congratulation You Won!");
+	});
+});
