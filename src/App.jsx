@@ -22,13 +22,14 @@ const App = () => {
           path="/play"
           component={Play}
         ></Route>
-        <Route
-          exact
-          path="/game"
-          component={Game}
-        ></Route>
+
       </Switch>
     </>
   );
 };
 export default App;
+        // <Route
+        //   exact
+        //   path="/game"
+        //   component={Game}
+        // ></Route>
