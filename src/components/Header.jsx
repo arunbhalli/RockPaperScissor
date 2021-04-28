@@ -1,11 +1,11 @@
-import React from 'react'
-
+import React from "react";
+import { Menu, Segment } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
-    <div>
-      header
-    </div>
-  )
-}
+    <Segment inverted >
 
-export default Header
+    </Segment>
+  );
+};
+export default Header;
