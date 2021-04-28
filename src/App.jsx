@@ -1,7 +1,6 @@
 import React from "react";
 import Play from "./components/Play.jsx";
 import Header from "./components/Header.jsx";
-import Game from "./components/Game.jsx";
 import { Redirect, Route, Switch } from "react-router-dom";
 // import {Container} from "semantic-ui-react"
 
@@ -28,8 +27,3 @@ const App = () => {
   );
 };
 export default App;
-        // <Route
-        //   exact
-        //   path="/game"
-        //   component={Game}
-        // ></Route>

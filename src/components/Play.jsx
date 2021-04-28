@@ -35,9 +35,14 @@ const Play = () => {
           Rock
         </div>
       </Link>
+      <Link to="/play">
+      <div data-cy="rock" onClick={() => newComputerChoice()}>
+     computer Choice
+      </div>
+    </Link>
       <Segment>
         My choice :{myChoice} <br />
-        computer choice {computer}
+        Computer choice: {computer}
       </Segment>
     </div>
   );

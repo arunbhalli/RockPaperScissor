@@ -4,14 +4,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <Segment inverted >
-      <Menu inverted secondary>
-         <Menu.Item
-        //  data-cy="game"
-          name="Game"
-          as={NavLink}
-          to={{pathname: "/game" }}
-        />
-      </Menu>
+
     </Segment>
   );
 };
