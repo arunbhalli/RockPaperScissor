@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Segment, Grid, Button } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import MyGame from "../components/MyGame"
+import Game from "./Game"
 
 const choices = ["rock", "paper", "scissor"];
 class Play extends React.Component {
@@ -57,8 +57,8 @@ class Play extends React.Component {
           <Button>
             <div data-cy="scissor" onClick={() => this.selectChoice('scissor')}>Scissor</div>
           </Button>
-           <MyGame  choice={myChoice}/>
-           <MyGame  choice={computer}/>
+           <Game  choice={myChoice}/>
+           <Game  choice={computer}/>
            <h1> { winner ? this.selectWinner() : null}</h1>
           <Button onClick={this.playGame}>Start</Button>
         </div>
