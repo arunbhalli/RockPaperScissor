@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { Segment, Grid, Button } from "semantic-ui-react";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import React from "react";
+import { Button, Container } from "semantic-ui-react";
 import Game from "./Game"
 
 const choices = ["rock", "paper", "scissor"];
@@ -48,13 +46,13 @@ class Play extends React.Component {
     const { myChoice, computer, winner} = this.state
     return (
       <>
-        <h1> Rock Paper Scissor</h1>
-        <div>
-          <Button to="/">
+        <h1>Welcome To The Rock, Paper & Scissor Game</h1>
+        <div> <h2> Select your  choice</h2>
+          <Button className="button">
             <div data-cy="rock" onClick={() => this.selectChoice('rock')}>Rock</div>
           </Button>
-          <Button>
-            <div data-cy="paper" onClick={() => this.selectChoice("paper")}>Paper</div>
+          <Button >
+            <div data-cy="paper"  onClick={() => this.selectChoice("paper")}>Paper</div>
           </Button>
           <Button>
             <div data-cy="scissor" onClick={() => this.selectChoice("scissor")}>Scissor</div>
@@ -62,7 +60,8 @@ class Play extends React.Component {
            <Game datacy="my-choice" choice={myChoice}/>
            <Game  datacy="computer" choice={computer}/>
            <h1 data-cy="result"> { winner ? this.selectWinner() : null}</h1>
-          <Button  data-cy="play-game" onClick={this.playGame}>Start</Button>
+           <h1>Computer choice</h1>
+          <Button size='massive' data-cy="play-game" onClick={this.playGame}>Start</Button>
         </div>
       </>
     );

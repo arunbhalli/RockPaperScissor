@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Header = () => {
   return (
     <Segment inverted >
-
+     
     </Segment>
   );
 };
