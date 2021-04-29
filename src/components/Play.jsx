@@ -7,8 +7,8 @@ import Game from "./Game"
 const choices = ["rock", "paper", "scissor"];
 class Play extends React.Component {
   state = {
-    myChoice: choices,
-    computer: choices,
+    myChoice: choices[0],
+    computer: choices[0],
     winner: "",
   };
 

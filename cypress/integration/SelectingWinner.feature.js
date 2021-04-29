@@ -1,4 +1,4 @@
-describe("User select  Rock ", () => {
+describe("Computer select  Rock ", () => {
 	beforeEach(() => {
 			cy.visit("/",{
 			onBeforeLoad(window) {
@@ -16,19 +16,19 @@ describe("User select  Rock ", () => {
 	});
 
 	it("Computer  choose Scissors and loses", () => {
-		cy.get('[data-cy="rock"]').click();
+		cy.get('[data-cy="scissor"]').click();
+		cy.get('[data-cy="my-choice"]').should("be.visible");
+		cy.get('[data-cy=play-game]').click();
+		cy.get('[data-cy="computer"]').should("be.visible");
+		cy.get('[data-cy="result"]').should("contain", "Computer Won");
+	});
+
+	it("Computer  choose Paper and wins", () => {
+		cy.get('[data-cy="paper"]').click();
 		cy.get('[data-cy="my-choice"]').should("be.visible");
 		cy.get('[data-cy=play-game]').click();
 		cy.get('[data-cy="computer"]').should("be.visible");
 		cy.get('[data-cy="result"]').should("contain", "Congratulation You Won!");
-	});
-
-	it("Computer  choose Paper and wins", () => {
-		cy.get('[data-cy="rock"]').click();
-		cy.get('[data-cy="my-choice"]').should("be.visible");
-		cy.get('[data-cy=play-game]').click();
-		cy.get('[data-cy="computer"]').should("be.visible");
-		cy.get('[data-cy="result"]').should("contain", "Computer Won!");
 	});
 });
 
