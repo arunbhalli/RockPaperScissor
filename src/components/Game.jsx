@@ -7,7 +7,7 @@ import scissor from '../images/scissor.png'
 const MyGame = ({choice,datacy}) => {
   return (
     <div data-cy={datacy}>
-    <img src={choice === "rock" ? rock : choice === "scissor" ? scissor : paper} alt="Rock paper scissor"/> 
+    <img src= {choice === "rock" ? rock : choice === "scissor" ? scissor :  paper } alt="Rock paper scissor"/> 
     </div>
   )
 }
