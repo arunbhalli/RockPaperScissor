@@ -1,7 +1,7 @@
 import React from "react";
+import Rules from "./components/Rules"
 import Play from "./components/Play.jsx";
 import { Redirect, Route, Switch } from "react-router-dom";
-import Header from "./components/Header.jsx";
 // import {Container} from "semantic-ui-react"
 
 const App = () => {
@@ -22,10 +22,9 @@ const App = () => {
         ></Route>
         <Route
         exact
-        path="/header"
-        component={Header}
+        path="/rules"
+        component={Rules}
       ></Route>
-
       </Switch>
     </>
   );

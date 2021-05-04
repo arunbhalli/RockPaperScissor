@@ -44,12 +44,11 @@ class Play extends React.Component {
      winner: "", 
     });
   };
-  // debugger
   render() {
     const { myChoice, computer, winner } = this.state;
     return (
       <>
-      <Button className="btn"><Link to="/header" className="link">
+      <Button className="btn"><Link to="/rules" className="link">
           Rules</Link></Button>
         <h1>Welcome To The Rock, Paper & Scissor Game</h1>
         <div>
