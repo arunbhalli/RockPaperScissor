@@ -12,11 +12,10 @@ class Play extends React.Component {
 
   playGame = () => {
     this.setState({
-          // computer: choices[Math.floor(Math.random() * (choices.length))],
-      // computer: choices[Math.round(Math.random() * 3)], //we can also use (choice.length)
-      // computer: choices[Math.ceil((Math.random() * (3)-0.3))], // somehow if we manage to get no in minus by using random methode 
-                                                              // it is possible to use Math.ceil methode 
-      computer: choices[Math.trunc(Math.random() * (3))],//we can also use (choice.length),
+      // computer: choices[Math.floor(Math.random() * (choices.length))],
+      computer: choices[Math.round(Math.random() * 3)], //we can also use (choice.length)
+      // computer: choices[Math.ceil((Math.random() * (3)-0.5))], // somehow if we manage to get no in minus by using random methode // it is possible to use Math.ceil methode                                                         
+      // computer: choices[Math.trunc(Math.random() * (3))],//we can also use (choice.length),
       winner: ""
     });
     this.setState({
@@ -42,7 +41,7 @@ class Play extends React.Component {
   selectChoice = (choice) => {
     this.setState({
       myChoice: choice,
-      winner: "",
+     winner: "", 
     });
   };
   // debugger 
